@@ -1,0 +1,26 @@
+[user]
+	email = <git email>
+	name = <user name to print in commit>
+	username = <git username>
+[gitreview]
+	remote = origin
+	username = <git username>
+	email = <git email>
+[credential "<eny domain where git private repo is present or auth is required. For ex 'https://bitbucket.org' or 'https://github.com'>"] 
+	username = <remote username>
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = true
+	pager = true
+[alias]
+	lg = !"git lg3"
+	lg1 = !"git lg1-specific --all"
+	lg2 = !"git lg2-specific --all"
+	lg3 = !"git lg3-specific --all"
+
+	lg1-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
+	lg2-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+	lg3-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
